@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Article-Cards.css">
     <link rel="stylesheet" href="assets/css/Articles-Cards.css">
+    <link rel="stylesheet" href="assets/css/BS5-Jumbotron-with-background-Image.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
+<body style="border-style: none;">
     <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3" style="background: rgb(167,22,22);">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: rgba(13,110,253,0);"><img style="width: 42px;height: 37px;" src="assets/img/file-pokeball-png-0.png"></span><span>Brand</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-5">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: rgba(13,110,253,0);"><img style="width: 42px;height: 37px;" src="assets/img/file-pokeball-png-0.png"></span><span>PokeFandom</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">First Item</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Second Item</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Third Item</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#" style="color: rgba(255,255,255,0.55);">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(255,255,255);">Pokedex</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Lore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Trivia</a></li>
                 </ul>
             </div>
         </div>
@@ -48,140 +50,50 @@
         <div class="row" style="padding: 30px;">
             <div class="col d-xl-flex justify-content-xl-center"><img src="assets/img/f8230790d488c07ce7151c8853579594.png"></div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="card-group">
-                    <div class="card" style="padding: 30px;" data-bs-toggle="modal" data-bs-target="#modal-1"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <p style="color: rgb(98,98,98);">#123</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h4>Name</h4>
-                                </div>
-                            </div>
-                            <div class="row d-xl-flex align-items-xl-center">
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="padding: 10px;background: #9ddf97;border-radius: 59px;box-shadow: 0px 4px 8px;font-size: 13px;margin-top: 16px;"><strong>Grass</strong></p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                            </div>
+    </div>
+    <div style="padding: 40px;">
+        <div class="container m-auto" id="filter-pane" style="background: rgb(159,158,154, 100);padding: 18px;border-radius: 15px;text-align: center;width: 1588px;">
+            <div class="row" style="text-align: center;">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="h3">Type &amp; Weakness</h1>
                         </div>
                     </div>
-                    <div class="card" style="padding: 30px;"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <p style="color: rgb(98,98,98);">#123</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h4>Name</h4>
-                                </div>
-                            </div>
-                            <div class="row d-xl-flex align-items-xl-center">
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="padding: 10px;background: #9ddf97;border-radius: 59px;box-shadow: 0px 4px 8px;font-size: 13px;margin-top: 16px;"><strong>Grass</strong></p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row" style="padding: 20px;">
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-1" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-1" for="formCheck-1" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-2" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-2" for="formCheck-2" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-5" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-11" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-11" for="formCheck-11" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-12" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-12" for="formCheck-12" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-4" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-9" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-9" for="formCheck-9" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-10" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-10" for="formCheck-10" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-3" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-7" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-7" for="formCheck-7" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-8" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-8" for="formCheck-8" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-2" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-5" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-5" for="formCheck-5" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-6" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-6" for="formCheck-6" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-1" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-3" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-3" for="formCheck-3" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-4" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-4" for="formCheck-4" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
                     </div>
-                    <div class="card" style="padding: 30px;"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <p style="color: rgb(98,98,98);">#123</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h4>Name</h4>
-                                </div>
-                            </div>
-                            <div class="row d-xl-flex align-items-xl-center">
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="padding: 10px;background: #9ddf97;border-radius: 59px;box-shadow: 0px 4px 8px;font-size: 13px;margin-top: 16px;"><strong>Grass</strong></p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row" style="padding: 20px;">
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-12" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-25" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-25" for="formCheck-1" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-26" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-26" for="formCheck-2" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-13" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-27" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-27" for="formCheck-11" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-28" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-28" for="formCheck-12" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-14" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-29" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-29" for="formCheck-9" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-30" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-30" for="formCheck-10" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-15" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-31" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-31" for="formCheck-7" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-32" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-32" for="formCheck-8" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-16" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-33" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-33" for="formCheck-5" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-34" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-34" for="formCheck-6" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-17" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-35" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-35" for="formCheck-3" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-36" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-36" for="formCheck-4" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
                     </div>
-                    <div class="card" style="padding: 30px;"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <p style="color: rgb(98,98,98);">#123</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h4>Name</h4>
-                                </div>
-                            </div>
-                            <div class="row d-xl-flex align-items-xl-center">
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="padding: 10px;background: #9ddf97;border-radius: 59px;box-shadow: 0px 4px 8px;font-size: 13px;margin-top: 16px;"><strong>Grass</strong></p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row" style="padding: 20px;">
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-6" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-13" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-13" for="formCheck-1" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-14" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-14" for="formCheck-2" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-7" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-15" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-15" for="formCheck-11" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-16" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-16" for="formCheck-12" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-8" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-17" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-17" for="formCheck-9" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-18" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-18" for="formCheck-10" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-9" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-19" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-19" for="formCheck-7" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-20" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-20" for="formCheck-8" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-10" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-21" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-21" for="formCheck-5" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-22" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-22" for="formCheck-6" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label-11" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-23" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-23" for="formCheck-3" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-24" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-24" for="formCheck-4" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div></div>
+    <div class="container">
         <div class="row">
             <div class="col">
                 <div class="card-group">
-                    <div class="card" style="padding: 30px;"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
+                    <div class="card" style="border-radius: 51px;padding: 30px;" data-bs-target="#modal-1" data-bs-toggle="modal"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
