@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/timer.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100" onload="setRound()">
     <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3" style="background: rgb(167,22,22);">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: rgba(13,110,253,0);"><img style="width: 42px;height: 37px;" src="assets/img/file-pokeball-png-0.png"></span><span>PokeFandom</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -27,31 +28,67 @@
             </div>
         </div>
     </nav>
-    <div class="container" style="padding-top: 20px;padding-bottom: 20px;">
-        <div class="row" style="text-align: center;">
-            <div class="col"><img src="assets/img/103c8c8c6414189135f4bd0ef87893fa.png" style="max-width: 1004px;text-align: center;"></div>
+    <div id="title">
+        <div style="padding: 59px;">
+            <div class="container">
+                <div class="row" style="text-align: center;">
+                    <div class="col"><img src="assets/img/103c8c8c6414189135f4bd0ef87893fa.png" style="max-width: 1004px;text-align: center;"></div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="card-group">
-                    <div class="card">
-                        <div class="row">
-                            <div class="col" style="text-align: center;"><img src="assets/img/30-302283_pikachu-pokmon-go-silhouette-drawing-whos-that-pokemon.png" style="max-width: 400px;text-align: center;"></div>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col" style="text-align: center;"><button class="btn btn-primary" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border-style: solid;border-color: rgb(0,0,0);">Bulbasaur</button></div>
-                                <div class="col" style="text-align: center;"><button class="btn btn-primary" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border-style: solid;border-color: rgb(0,0,0);">Charmander</button></div>
-                                <div class="col" style="text-align: center;"><button class="btn btn-primary" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border-style: solid;border-color: rgb(0,0,0);">Squirtle</button></div>
-                                <div class="col" style="text-align: center;"><button class="btn btn-primary" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border-style: solid;border-color: rgb(0,0,0);">Pikachu</button></div>
+    </div>
+    <div id="progress">
+        <div class="container" style="display: flex;justify-content: center;">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <div id="timer"></div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </div>
+    <div style="position: relative;">
+        <div id="pokemon-div" style="display: flex;justify-content: center;padding: 43px;">
+            <div class="row">
+                <div class="col">
+                    <div class="container" style="padding-top: 20px;padding-bottom: 20px;">
+                        <div class="card-group">
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><img id="pokemon-img" class="card-img"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="selection-div" style="padding: 72px;padding-top: 9px;padding-right: 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="text-align: center;"><button class="btn btn-primary" id="button-option-1" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border-style: solid;border-color: rgb(0,0,0);" onclick="makeSelection(1)">Bulbasaur</button></div>
+                    <div class="col" style="text-align: center;"><button class="btn btn-primary" id="button-option-2" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border-style: solid;border-color: rgb(0,0,0);" onclick="makeSelection(2)">Charmander</button></div>
+                    <div class="col" style="text-align: center;"><button class="btn btn-primary" id="button-option-3" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border-style: solid;border-color: rgb(0,0,0);" onclick="makeSelection(3)">Squirtle</button></div>
+                    <div class="col" style="text-align: center;"><button class="btn btn-primary" id="button-option-4" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border-style: solid;border-color: rgb(0,0,0);" onclick="makeSelection(4)">Pikachu</button></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <footer class="text-center bg-dark">
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Title</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The content of your modal.</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center bg-dark mt-auto">
         <div class="container text-white py-4 py-lg-5">
             <ul class="list-inline">
                 <li class="list-inline-item me-4"><a class="link-light" href="#">Web design</a></li>
@@ -75,6 +112,10 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/Lightbox-Gallery-No-Gutters.js"></script>
+    <script src="assets/js/pokedex.js"></script>
+    <script src="assets/js/pokemonApi.js"></script>
+    <script src="assets/js/trivia/timer.js"></script>
+    <script src="assets/js/trivia/trivia.js"></script>
 </body>
 
 </html>

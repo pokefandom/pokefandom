@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/timer.css">
 </head>
 
-<body style="border-style: none;">
+<body style="border-style: none;" onload="createNewRow();">
     <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3" style="background: rgb(167,22,22);">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: rgba(13,110,253,0);"><img style="width: 42px;height: 37px;" src="assets/img/file-pokeball-png-0.png"></span><span>PokeFandom</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -89,11 +90,30 @@
         </div>
     </div>
     <div></div>
-    <div class="container">
-        <div class="row">
+    <div class="container" id="poke-cards">
+        <div class="row" id="poke-1-4">
             <div class="col">
                 <div class="card-group">
-                    <div class="card" style="border-radius: 51px;padding: 30px;" data-bs-target="#modal-1" data-bs-toggle="modal"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
+                    <div class="card" id="poke-1" style="border-radius: 51px;padding: 30px;" data-bs-target="#modal-1" data-bs-toggle="modal"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <p style="color: rgb(98,98,98);">#123</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h4>Name</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col d-flex" style="text-align: left;">
+                                    <p style="padding: 10px;background: #9ddf97;border-radius: 59px;box-shadow: 0px 4px 8px;font-size: 13px;margin-top: 16px;"><strong>Grass</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="poke-2" style="padding: 30px;"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
@@ -124,7 +144,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card" style="padding: 30px;"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
+                    <div class="card" id="poke-3" style="padding: 30px;"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
@@ -155,38 +175,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card" style="padding: 30px;"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <p style="color: rgb(98,98,98);">#123</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h4>Name</h4>
-                                </div>
-                            </div>
-                            <div class="row d-xl-flex align-items-xl-center">
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="padding: 10px;background: #9ddf97;border-radius: 59px;box-shadow: 0px 4px 8px;font-size: 13px;margin-top: 16px;"><strong>Grass</strong></p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                                <div class="col d-xl-flex align-items-xl-center" style="text-align: left;">
-                                    <p class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 16px;">&nbsp;</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="padding: 30px;"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
+                    <div class="card" id="poke-4" style="padding: 30px;"><img class="card-img-top w-100 d-block" src="assets/img/001Bulbasaur_AG_anime.webp" style="max-width: 345px;">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
@@ -222,7 +211,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col d-xl-flex justify-content-xl-center align-items-xl-center" style="padding: 28px;"><button class="btn btn-primary d-xl-flex justify-content-xl-center align-items-xl-center" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border: 2px solid rgb(0,0,0);border-radius: 27px;"><strong>Load More</strong></button></div>
+        <div class="col d-flex justify-content-center" style="padding: 28px;"><button class="btn btn-primary" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border: 2px solid rgb(0,0,0);border-radius: 27px;" onclick="createNewRow()"><strong>Load More</strong></button></div>
     </div>
     <footer class="text-center bg-dark">
         <div class="container text-white py-4 py-lg-5">
@@ -248,6 +237,10 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/Lightbox-Gallery-No-Gutters.js"></script>
+    <script src="assets/js/pokedex.js"></script>
+    <script src="assets/js/pokemonApi.js"></script>
+    <script src="assets/js/trivia/timer.js"></script>
+    <script src="assets/js/trivia/trivia.js"></script>
 </body>
 
 </html>
