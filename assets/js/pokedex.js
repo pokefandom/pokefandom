@@ -49,6 +49,8 @@ async function createNewRow(){
     let thumbnail = document.createElement("div");
     thumbnail.className = "card";
     thumbnail.style = "border-radius: 51px;padding: 30px;";
+    thumbnail.setAttribute("data-bs-target", "#modal-1");
+    thumbnail.setAttribute("data-bs-toggle", "modal");
     
     let sprite = document.createElement("img");
     sprite.className = "card-img-top w-100 d-block";
@@ -59,7 +61,7 @@ async function createNewRow(){
     
     let cardBody = document.createElement("div");
     cardBody.className = "card-body";
-    
+        
     let cardBodyRowIndex = document.createElement("div");
     cardBodyRowIndex.className = "row";
     
@@ -94,7 +96,7 @@ async function createNewRow(){
     cardBodyTypeColumn.className = document.className = "col d-flex";
     
     let cardBodyTypeButton = document.createElement("div");
-    cardBodyTypeButton.className = "d-xl-flex";
+    cardBodyTypeButton.className = "d-flex align-items-end";
     cardBodyTypeButton.style = "padding: 10px;background: #9ddf97;border-radius: 59px;box-shadow: 0px 4px 8px;font-size: 13px;margin-top: 16px;";
     cardBodyTypeButton.innerHTML = "Grass";
     

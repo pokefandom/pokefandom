@@ -160,3 +160,10 @@ input:checked ~ #grass-button-2 {
 #grass-button-2 {
 }
 
+/* Fb Comments Width Fix */
+
+.fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span, .fb_iframe_widget_fluid_desktop iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
