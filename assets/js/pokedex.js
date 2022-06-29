@@ -27,7 +27,8 @@ function setPokemonCard(sprite, index, name){
 async function createNewRow(){
     let container = document.getElementById("poke-cards");
     
-    for(let x = 0; x < 2; x++){
+    let numRowsToCreate = 3;
+    for(let x = 0; x < numRowsToCreate; x++){
     
     let row = document.createElement("div");
     row.className = "row";
@@ -92,16 +93,27 @@ async function createNewRow(){
     let cardBodyTypeRow = document.createElement("div");
     cardBodyTypeRow.className = "row";
     
-    let cardBodyTypeColumn = document.createElement("div");
-    cardBodyTypeColumn.className = document.className = "col d-flex";
+        
+//         make pokemon type labels
+    for(let t = 0; t < pokemon.types.length; t++){
+        let type = pokemon.types[t].type.name;
+        
+        let cardBodyTypeColumn = document.createElement("div");
+    cardBodyTypeColumn.className = document.className = "col d-flex label-type label-"+type;
+        cardBodyTypeColumn.innerHTML = "<span style='font-weight:bold color:#ffffff'>" + (type.charAt(0).toUpperCase() + type.slice(1)) + "</style>";
+
+//     let cardBodyTypeButton = document.createElement("div");
+//     cardBodyTypeButton.className = "d-flex align-items-end";
+//     cardBodyTypeButton.style = "padding: 10px;background: #9ddf97;border-radius: 59px;box-shadow: 0px 4px 8px;font-size: 13px;margin-top: 16px;";
+//     cardBodyTypeButton.innerHTML = "Grass";
+        
+        cardBodyTypeRow.appendChild(cardBodyTypeColumn);
+    }
+
+
     
-    let cardBodyTypeButton = document.createElement("div");
-    cardBodyTypeButton.className = "d-flex align-items-end";
-    cardBodyTypeButton.style = "padding: 10px;background: #9ddf97;border-radius: 59px;box-shadow: 0px 4px 8px;font-size: 13px;margin-top: 16px;";
-    cardBodyTypeButton.innerHTML = "Grass";
-    
-    cardBodyTypeColumn.appendChild(cardBodyTypeButton);
-    cardBodyTypeRow.appendChild(cardBodyTypeColumn);
+    // cardBodyTypeColumn.appendChild(cardBodyTypeButton);
+    // cardBodyTypeRow.appendChild(cardBodyTypeColumn);
     cardBody.appendChild(cardBodyTypeRow);
     
     thumbnail.appendChild(cardBody);
