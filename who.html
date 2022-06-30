@@ -69,7 +69,7 @@
     </div>
     <div id="game-div" style="position: relative;">
         <div id="pokemon-div" style="display: flex;justify-content: center;padding: 43px;">
-            <div class="row">
+            <div class="row" id="pokemon-container">
                 <div class="col" style="max-width: 438px;max-height: 438px;" onload="tutorialPhoto()">
                     <div class="container" style="padding-top: 20px;padding-bottom: 20px;">
                         <div class="card-group">
@@ -98,12 +98,12 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Modal Title</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title">Results</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>The content of your modal.</p>
+                    <p id="p-results">The content of your modal.</p>
                 </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+                <div class="modal-footer"></div>
             </div>
         </div>
     </div>

@@ -27,9 +27,9 @@ async function setupGame(id){
     
     
     if(gameType == "learn"){
-        await tutorialStep1();
+        await nextStep();
     } else {
-        await setRound();    
+        await newGame(); 
     }
     
 }

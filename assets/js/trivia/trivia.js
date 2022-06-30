@@ -1,9 +1,20 @@
 var currentPokemon = "";
 var correctOption = "";
 var answerButton = "";
+var questionCount = 0;
+var correctCount = 0;
+var maxQuestions = 5;
+var resultsModal;
 
 function newGame(){
-    startTimer();
+    // startTimer();
+    questionCount = 0;
+    correctCount = 0;
+    setRound();
+    resultsModal = new bootstrap.Modal(document.getElementById('modal-1'), {});
+    document.onreadystatechange = function () {
+        resultsModal.show();
+    };
 }
 
 function hideButtons(){
@@ -37,7 +48,7 @@ async function getRandomPokemonFromApi(){
 async function setRound(){
     const newPokemon = await getRandomPokemonFromApi(); 
     setCurrentPokemon(newPokemon);
-    
+    questionCount++;
 }
 
 function setCurrentPokemon(pokemonJson){
@@ -52,6 +63,7 @@ function hideCurrentPokemon(){
 }
 
 function showCurrentPokemon(){
+    console.log("showing current pokemon");
     document.getElementById("pokemon-img").style.filter = "grayscale(0%) brightness(100%)";
 }
 
@@ -69,6 +81,7 @@ async function setOptions(){
     let pokemon = await getRandomPokemonFromApi();
     let nameToSet = "";
     let button = document.getElementById("button-option-" + i);
+        button.disabled = false;
         
     if(i === correctOption){
         nameToSet = await currentPokemonName;
@@ -84,16 +97,14 @@ async function setOptions(){
         
     i++;
     }
-    
-
-    
 }
 
 function makeSelection(i){
+    
     showCurrentPokemon();
     document.getElementById("button-option-" + correctOption).style.background = "rgb(255,205,0)";
     if(i === correctOption){
-        // add point
+        correctCount++;
     }
     
     sleep(2000).then(
@@ -101,7 +112,23 @@ function makeSelection(i){
             setRound(); 
         }
     );
- 
+    console.log("QUESTION COUNT: " + questionCount);
+    console.log("MAX QUESTIONS: " + maxQuestions);
+    console.log("MODAL TIME: " + (questionCount == maxQuestions));
+    
+    if(questionCount == maxQuestions){
+        
+        document.getElementById("p-results").innerHTML = (correctCount) + " correct out of " + (questionCount);
+        
+        
+        // document.getElementById("modal-1").focus();
+        resultsModal.toggle();
+        sleep(3000).then(
+        () => { 
+            resultsModal.toggle();
+            loadGamePage();
+        }
+        )};
 }
 
 function sleep(ms) {
