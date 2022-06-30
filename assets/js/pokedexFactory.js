@@ -11,7 +11,7 @@ async function updateRows() {
     lastPokemonNum = 1;
     
     for(let i = rowCount; i >= 0; i--){
-    await createNewRow();    
+    await createNewRow();
     }
 }
 
@@ -44,17 +44,17 @@ async function canPost(i) {
                     }
                 }
 
-//                 if(weaknessFilter.length !== 0){
-//                     for(let k = 0; k < weaknessFilter.length; k++){
-//                         // console.log("weaknessToMatch" + typeToMatch + " == weaknessFilter " + weaknessFilter[j]);
-//                         if(weaknessFilter[j] ===  typeToMatch){
-//                             canPost = true;
-//                             console.log("FOUND WEAKNESS MATCH");
-//                             return canPost;
-//                         }
-//                     }
-//                 }
-//                 console.log("CAN POST" + canPost);
+                // if(weaknessFilter.length !== 0){
+                //     for(let k = 0; k < weaknessFilter.length; k++){
+                //         // console.log("weaknessToMatch" + typeToMatch + " == weaknessFilter " + weaknessFilter[j]);
+                //         if(weaknessFilter[j] ===  typeToMatch){
+                //             canPost = true;
+                //             console.log("FOUND WEAKNESS MATCH");
+                //             return canPost;
+                //         }
+                //     }
+                // }
+                console.log("CAN POST" + canPost);
 
         }
     // canPost = true;
@@ -76,7 +76,7 @@ async function createNewRow() {
 
 
 
-    let numRowsToCreate = 5;
+    let numRowsToCreate = 2;
     for (let x = 0; x < numRowsToCreate; x++) {
 
 

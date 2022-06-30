@@ -4,7 +4,7 @@ let weaknessFilter = [];
 const allTypes = ["normal", "fire", "water", "electric", "grass", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dragon", "dark", "steel", "fairy"];
 
 
-function toggleButton(id){
+async function toggleButton(id){
     const button = document.getElementById(id);
     const pokeType = id.split("-")[0];
     const buttonType = id.split("-")[1];
@@ -16,7 +16,82 @@ function toggleButton(id){
         if(buttonType === "type"){
             typeFilter.push(pokeType)
         } else{
-            weaknessFilter.push(pokeType);
+            
+            
+//             if(pokeType === "normal"){
+                
+//             }
+            
+//             if(pokeType ==="fire"){
+                
+//             }
+            
+//                if(pokeType ==="water"){
+                
+//             }
+            
+//                if(pokeType ==="electric"){
+                
+//             }
+            
+//                if(pokeType ==="grass"){
+                
+//             }
+            
+//                if(pokeType ==="ice"){
+                
+//             }
+            
+//                if(pokeType ==="fighting"){
+                
+//             }
+            
+//                if(pokeType ==="ground"){
+                
+//             }
+            
+//                if(pokeType ==="flying"){
+                
+//             }
+            
+//                if(pokeType ==="psychic"){
+                
+//             }
+            
+//                if(pokeType ==="bug"){
+//                 weaknessFilter.push("fire");
+//                 weaknessFilter.push("flying");
+//                 weaknessFilter.push("rock");
+//             }
+            
+//                if(pokeType ==="rock"){
+                
+//             }
+            
+//                if(pokeType ==="ghost"){
+                
+//             }
+            
+//                if(pokeType ==="dragon"){
+                
+//             }
+            
+//                if(pokeType ==="dark"){
+                
+//             }
+            
+//                if(pokeType ==="steel"){
+                
+//             }
+            
+//                if(pokeType ==="fire"){
+                
+//             }
+            
+//                if(pokeType ==="fire"){
+                
+//             }
+            
         }
         
     } else {
@@ -30,13 +105,15 @@ function toggleButton(id){
             
         } else{
             
-            weaknessFilter = weaknessFilter.filter(function(weakness){
-                return weakness != pokeType;
-            });
+            // weaknessFilter = weaknessFilter.filter(function(weakness){
+            //     return weakness != pokeType;
+            // });
             
         }
     }
-    updateRows();
+    
+    await updateRows();
+     
 }
 
 
