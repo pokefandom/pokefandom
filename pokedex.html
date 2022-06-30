@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="assets/css/Articles-Cards.css">
     <link rel="stylesheet" href="assets/css/BS5-Jumbotron-with-background-Image.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/nav.compiled.css">
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
     <link rel="stylesheet" href="assets/css/pokeball-pixel.compiled.css">
     <link rel="stylesheet" href="assets/css/pokedex.compiled.css">
+    <link rel="stylesheet" href="assets/css/pokemon-cards.compiled.css">
     <link rel="stylesheet" href="assets/css/pokemon-colours.compiled.css">
     <link rel="stylesheet" href="assets/css/pokemon.compiled.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -20,11 +22,12 @@
 </head>
 
 <body style="border-style: none;" onload="createNewRow();">
-    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3" style="background: rgb(167,22,22);">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: rgba(13,110,253,0);"><img style="width: 42px;height: 37px;" src="assets/img/file-pokeball-png-0.png"></span><span>PokeFandom</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <nav class="navbar navbar-dark navbar-expand-md py-3 header">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><img style="width: 42px;height: 37px;" src="assets/img/file-pokeball-png-0.png"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: rgba(13,110,253,0);"></span><span>PokeFandom</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#" style="color: rgba(255,255,255,0.55);">Home</a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(255,255,255);">Pokedex</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Lore</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Trivia</a></li>
@@ -179,7 +182,7 @@
     <div class="row">
         <div class="col d-flex justify-content-center" style="padding: 28px;"><button class="btn btn-primary" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);border: 2px solid rgb(0,0,0);border-radius: 27px;" onclick="createNewRow()"><strong>Load More</strong></button></div>
     </div>
-    <footer class="text-center bg-dark">
+    <div id="footer" class="text-center footer">
         <div class="container text-white py-4 py-lg-5">
             <ul class="list-inline">
                 <li class="list-inline-item me-4"><a class="link-light" href="#">Web design</a></li>
@@ -199,7 +202,7 @@
             </ul>
             <p class="text-muted mb-0">Copyright © 2022 Brand</p>
         </div>
-    </footer>
+    </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>

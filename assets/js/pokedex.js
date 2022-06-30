@@ -4,8 +4,6 @@ let weaknessFilter = [];
 const allTypes = ["normal", "fire", "water", "electric", "grass", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dragon", "dark", "steel", "fairy"];
 
 
-
-
 function toggleButton(id){
     const button = document.getElementById(id);
     const pokeType = id.split("-")[0];
@@ -38,6 +36,7 @@ function toggleButton(id){
             
         }
     }
+    updateRows();
 }
 
 
