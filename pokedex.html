@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="assets/css/BS5-Jumbotron-with-background-Image.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
+    <link rel="stylesheet" href="assets/css/pokeball-pixel.compiled.css">
+    <link rel="stylesheet" href="assets/css/pokedex.compiled.css">
+    <link rel="stylesheet" href="assets/css/pokemon-colours.compiled.css">
     <link rel="stylesheet" href="assets/css/pokemon.compiled.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/timer.css">
@@ -53,41 +56,124 @@
             <div class="col d-xl-flex justify-content-xl-center"></div>
         </div>
     </div>
-    <div>
+    <div style="--bs-dark: #4A5180;--bs-dark-rgb: 74,81,128;">
         <div class="container">
-            <div class="row" style="background: #000000;">
-                <div class="col" style="padding-top: 12px;padding-bottom: 12px;">
-                    <div class="row" style="background: rgb(159,15,16);margin: 23px;border-style: none;border-color: rgb(159,15,16);">
-                        <div class="col">
+            <div class="row" style="background: rgba(0,0,0,0);">
+                <div class="col" style="border-width: 39px;border-style: solid;">
+                    <div class="row bg-pokeball-red" style="border-style: none;border-color: rgb(159,15,16);">
+                        <div class="col" style="border-bottom-width: 35px;border-bottom-style: solid;">
                             <h1 class="display-3 font-monospace fw-bold text-center h3" style="color: rgb(255,255,255);padding: 15px;">Pokedex</h1>
                         </div>
                     </div>
-                    <div class="row" style="margin-bottom: 30px;"></div>
-                    <div class="row" style="background: #ffffff;margin: 23px;border-style: none;border-color: rgb(159,15,16);">
-                        <div class="col">
-                            <h1 class="h3" style="color: rgb(255,255,255);">Type &amp; Weakness</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div style="padding: 40px;border-width: 146px;border-color: rgb(159,14,15);">
-        <div class="container m-auto" id="filter-pane" style="background: rgb(159,158,154, 100);padding: 18px;border-radius: 15px;text-align: center;width: 1588px;">
-            <div class="row" style="text-align: center;">
-                <div class="col">
                     <div class="row">
-                        <div class="col">
-                            <h1 class="h3">Type &amp; Weakness</h1>
+                        <div class="col filter-section-column">
+                            <div class="row filter-row">
+                                <div class="col filter-column" id="normal-filter-column">
+                                    <div id="button-type-normal" class="pokedex-button-type pokedex-button bg-normal box-shadow-normal"><label class="form-label">Normal</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="normal-type-control" onclick="toggleButton(&quot;normal-type-control&quot;);"><input type="checkbox" id="normal-type-checkbox" class="checkbox"><label class="form-label" for="normal-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="normal-weakness-control" onclick="toggleButton(&quot;normal-weakness-control&quot;);"><input type="checkbox" id="normal-type-checkbox" class="checkbox"><label class="form-label" for="normal-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="fire-filter-column">
+                                    <div id="button-type-normal-1" class="pokedex-button-type pokedex-button bg-fire box-shadow-fire"><label class="form-label">Fire</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="fire-type-control" onclick="toggleButton(&quot;fire-type-control&quot;);"><input type="checkbox" id="fire-type-checkbox" class="checkbox"><label class="form-label" for="fire-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="fire-weakness-control" onclick="toggleButton(&quot;fire-weakness-control&quot;);"><input type="checkbox" id="fire-type-checkbox" class="checkbox"><label class="form-label" for="fire-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="water-filter-column">
+                                    <div id="button-type-water" class="pokedex-button-type pokedex-button bg-water box-shadow-water"><label class="form-label">Water</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="water-type-control" onclick="toggleButton(&quot;water-type-control&quot;);"><input type="checkbox" id="water-type-checkbox" class="checkbox"><label class="form-label" for="water-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="water-weakness-control" onclick="toggleButton(&quot;water-weakness-control&quot;);"><input type="checkbox" id="water-type-checkbox" class="checkbox"><label class="form-label" for="fire-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="electric-filter-column">
+                                    <div id="button-type-electric" class="pokedex-button-type pokedex-button bg-electric box-shadow-electric"><label class="form-label">Electric</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="electric-type-control" onclick="toggleButton(&quot;electric-type-control&quot;);"><input type="checkbox" id="electric-type-checkbox" class="checkbox"><label class="form-label" for="electric-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="electric-weakness-control" onclick="toggleButton(&quot;electric-weakness-control&quot;);"><input type="checkbox" id="electric-type-checkbox" class="checkbox"><label class="form-label" for="electric-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="grass-filter-column">
+                                    <div id="button-type-grass" class="pokedex-button-type pokedex-button bg-grass box-shadow-grass"><label class="form-label">Grass</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="grass-type-control" onclick="toggleButton(&quot;grass-type-control&quot;);"><input type="checkbox" id="grass-type-checkbox" class="checkbox"><label class="form-label" for="grass-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="grass-weakness-control" onclick="toggleButton(&quot;grass-weakness-control&quot;);"><input type="checkbox" id="grass-type-checkbox" class="checkbox"><label class="form-label" for="grass-checkbox">W</label></div>
+                                </div>
+                            </div>
+                            <div class="row filter-row">
+                                <div class="col filter-column" id="ice-filter-column">
+                                    <div id="button-type-ice" class="pokedex-button-type pokedex-button bg-ice box-shadow-ice"><label class="form-label">Ice</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="ice-type-control" onclick="toggleButton(&quot;ice-type-control&quot;);"><input type="checkbox" id="ice-type-checkbox" class="checkbox"><label class="form-label" for="ice-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="ice-weakness-control" onclick="toggleButton(&quot;ice-weakness-control&quot;);"><input type="checkbox" id="ice-type-checkbox" class="checkbox"><label class="form-label" for="ice-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="fighting-filter-column">
+                                    <div id="button-type-fighting" class="pokedex-button-type pokedex-button bg-fighting box-shadow-fighting"><label class="form-label">Fighting</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="fighting-type-control" onclick="toggleButton(&quot;fighting-type-control&quot;);"><input type="checkbox" id="fighting-type-checkbox" class="checkbox"><label class="form-label" for="fighting-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="fighting-weakness-control" onclick="toggleButton(&quot;fighting-weakness-control&quot;);"><input type="checkbox" id="fighting-type-checkbox" class="checkbox"><label class="form-label" for="fighting-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="poison-filter-column">
+                                    <div id="button-type-poison" class="pokedex-button-type pokedex-button bg-poison box-shadow-poison"><label class="form-label">Poison</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="poison-type-control" onclick="toggleButton(&quot;poison-type-control&quot;);"><input type="checkbox" id="poison-type-checkbox" class="checkbox"><label class="form-label" for="poison-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="poison-weakness-control" onclick="toggleButton(&quot;poison-weakness-control&quot;);"><input type="checkbox" id="poison-type-checkbox" class="checkbox"><label class="form-label" for="poison-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="ground-filter-column">
+                                    <div id="button-type-ground" class="pokedex-button-type pokedex-button bg-ground box-shadow-ground"><label class="form-label">Ground</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="ground-type-control" onclick="toggleButton(&quot;ground-type-control&quot;);"><input type="checkbox" id="ground-type-checkbox" class="checkbox"><label class="form-label" for="ground-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="ground-weakness-control" onclick="toggleButton(&quot;ground-weakness-control&quot;);"><input type="checkbox" id="ground-type-checkbox" class="checkbox"><label class="form-label" for="ground-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="flying-filter-column">
+                                    <div id="button-type-flying" class="pokedex-button-type pokedex-button bg-flying box-shadow-flying"><label class="form-label">Flying</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="flying-type-control" onclick="toggleButton(&quot;flying-type-control&quot;);"><input type="checkbox" id="flying-type-checkbox" class="checkbox"><label class="form-label" for="flying-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="flying-weakness-control" onclick="toggleButton(&quot;flying-weakness-control&quot;);"><input type="checkbox" id="flying-type-checkbox" class="checkbox"><label class="form-label" for="flying-checkbox">W</label></div>
+                                </div>
+                            </div>
+                            <div class="row filter-row">
+                                <div class="col filter-column" id="psychic-filter-column">
+                                    <div id="button-type-psychic" class="pokedex-button-type pokedex-button bg-psychic box-shadow-psychic"><label class="form-label">Psychic</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="psychic-type-control" onclick="toggleButton(&quot;psychic-type-control&quot;);"><input type="checkbox" id="psychic-type-checkbox" class="checkbox"><label class="form-label" for="psychic-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="psychic-weakness-control" onclick="toggleButton(&quot;psychic-weakness-control&quot;);"><input type="checkbox" id="psychic-type-checkbox" class="checkbox"><label class="form-label" for="psychic-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="bug-filter-column">
+                                    <div id="button-type-bug" class="pokedex-button-type pokedex-button bg-bug box-shadow-bug"><label class="form-label">Bug</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="bug-type-control" onclick="toggleButton(&quot;bug-type-control&quot;);"><input type="checkbox" id="bug-type-checkbox" class="checkbox"><label class="form-label" for="bug-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="bug-weakness-control" onclick="toggleButton(&quot;bug-weakness-control&quot;);"><input type="checkbox" id="bug-type-checkbox" class="checkbox"><label class="form-label" for="bug-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="rock-filter-column">
+                                    <div id="rock-type-poison" class="pokedex-button-type pokedex-button bg-rock box-shadow-poison"><label class="form-label">Rock</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="rock-type-control" onclick="toggleButton(&quot;rock-type-control&quot;);"><input type="checkbox" id="rock-type-checkbox" class="checkbox"><label class="form-label" for="rock-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="rock-weakness-control" onclick="toggleButton(&quot;rock-weakness-control&quot;);"><input type="checkbox" id="rock-type-checkbox" class="checkbox"><label class="form-label" for="rock-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="ground-filter-column-1">
+                                    <div id="button-type-ghost" class="pokedex-button-type pokedex-button bg-ghost box-shadow-ghost"><label class="form-label">Ghost</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="ghost-type-control" onclick="toggleButton(&quot;ghost-type-control&quot;);"><input type="checkbox" id="ghost-type-checkbox" class="checkbox"><label class="form-label" for="ghost-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="ghost-weakness-control" onclick="toggleButton(&quot;ghost-weakness-control&quot;);"><input type="checkbox" id="ghost-type-checkbox" class="checkbox"><label class="form-label" for="ghost-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="dragon-filter-column">
+                                    <div id="button-type-dragon" class="pokedex-button-type pokedex-button bg-dragon box-shadow-dragon"><label class="form-label">Dragon</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="dragon-type-control" onclick="toggleButton(&quot;dragon-type-control&quot;);"><input type="checkbox" id="dragon-type-checkbox" class="checkbox"><label class="form-label" for="dragon-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="dragon-weakness-control" onclick="toggleButton(&quot;dragon-weakness-control&quot;);"><input type="checkbox" id="dragon-type-checkbox" class="checkbox"><label class="form-label" for="dragon-checkbox">W</label></div>
+                                </div>
+                            </div>
+                            <div class="row filter-row">
+                                <div class="col filter-column" id="dark-filter-column">
+                                    <div id="button-type-dark" class="pokedex-button-type pokedex-button bg-dark box-shadow-dark"><label class="form-label">Dark</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="dark-type-control" onclick="toggleButton(&quot;dark-type-control&quot;);"><input type="checkbox" id="dark-type-checkbox" class="checkbox"><label class="form-label" for="dark-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="dark-weakness-control" onclick="toggleButton(&quot;dark-weakness-control&quot;);"><input type="checkbox" id="dark-type-checkbox" class="checkbox"><label class="form-label" for="dark-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="steel-filter-column">
+                                    <div id="button-type-steel" class="pokedex-button-type pokedex-button bg-steel box-shadow-steel"><label class="form-label">Steel</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="steel-type-control" onclick="toggleButton(&quot;steel-type-control&quot;);"><input type="checkbox" id="steel-type-checkbox" class="checkbox"><label class="form-label" for="steel-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="steel-weakness-control" onclick="toggleButton(&quot;steel-weakness-control&quot;);"><input type="checkbox" id="steel-type-checkbox" class="checkbox"><label class="form-label" for="steel-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="fairy-filter-column">
+                                    <div id="button-type-fairy" class="pokedex-button-type pokedex-button bg-fairy box-shadow-fairy"><label class="form-label">Fairy</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="fairy-type-control" onclick="toggleButton(&quot;fairy-type-control&quot;);"><input type="checkbox" id="fairy-type-checkbox" class="checkbox"><label class="form-label" for="fairy-checkbox">T</label></div>
+                                    <div class="align-content-center pokedex-type-toggle pokedex-button-type pokedex-button" id="fairy-weakness-control" onclick="toggleButton(&quot;fairy-weakness-control&quot;);"><input type="checkbox" id="fairy-type-checkbox" class="checkbox"><label class="form-label" for="fairy-checkbox">W</label></div>
+                                </div>
+                                <div class="col filter-column" id="ground-filter-column-2"></div>
+                                <div class="col filter-column" style="justify-content: right!important;"><img class="img-fluid" data-bs-toggle="tooltip" data-bss-tooltip="" src="assets/img/Poké_Ball_icon.svg.png" style="max-width: 25%;margin-right: 15px;margin-top: 3px;" title="Reset" onclick="resetFilters()"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row" style="padding: 20px;">
-                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center" style="/*background: #ffffff;*/"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-filter-label" style="background: rgb(157,223,151);width: 65px;height: 50px;border-style: none;margin-bottom: 0px;"><strong>Grass</strong></label><input type="checkbox" id="formCheck-1" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-1" for="formCheck-1" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>T</strong></label><input type="checkbox" id="formCheck-2" class="form-check-input type-box"><label class="form-label d-xxl-flex justify-content-xxl-center align-items-xxl-center grass-button" id="grass-button-2" for="formCheck-2" style="width: 50px;height: 50px;margin: 0px;border-left-width: 0.5px;border-left-style: solid;"><strong>W</strong></label></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div style="padding: 40px;border-width: 146px;border-color: rgb(159,14,15);"></div>
     <div></div>
     <div class="container" id="poke-cards"></div>
     <div class="row">
@@ -115,10 +201,12 @@
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/facebook.js"></script>
     <script src="assets/js/Lightbox-Gallery-No-Gutters.js"></script>
     <script src="assets/js/pokedex.js"></script>
+    <script src="assets/js/pokedexFactory.js"></script>
     <script src="assets/js/pokemonApi.js"></script>
     <script src="assets/js/trivia/timer.js"></script>
     <script src="assets/js/trivia/trivia.js"></script>
