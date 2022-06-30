@@ -1,5 +1,6 @@
 var currentPokemon = "";
 var correctOption = "";
+var answerButton = "";
 
 function newGame(){
     startTimer();
@@ -63,21 +64,29 @@ async function setOptions(){
     const currentPokemonName = currentPokemon.name.charAt(0).toUpperCase() + currentPokemon.name.slice(1);
     
     let i = 1;
+    let a = i;
     while(i <=4){
     let pokemon = await getRandomPokemonFromApi();
     let nameToSet = "";
-    
+    let button = document.getElementById("button-option-" + i);
+        
     if(i === correctOption){
-        nameToSet = currentPokemonName;
+        nameToSet = await currentPokemonName;
+        answerButton = await button;
+        // button.classList.add("swivel");
     } else {
-        nameToSet = pokemon.name;
+        nameToSet = await pokemon.name;
+        // button.classList.remove("swivel");
     }
     
-    document.getElementById("button-option-" + i).textContent = nameToSet.charAt(0).toUpperCase() + nameToSet.slice(1);
+    button.textContent = nameToSet.charAt(0).toUpperCase() + nameToSet.slice(1);
+    button.style.background = "#ffffff";
         
-        document.getElementById("button-option-" + i).style.background = "#ffffff";
     i++;
     }
+    
+
+    
 }
 
 function makeSelection(i){
@@ -98,3 +107,11 @@ function makeSelection(i){
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+// function tutorialPhoto(){
+//     let photo = document.getElementById("pokemon-img");
+// }
+
+// function removeAllSwivel(){
+//     for(let i = 1; i <= 4; i++)}
+// }

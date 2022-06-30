@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/pokemon.compiled.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/timer.css">
+    <link rel="stylesheet" href="assets/css/trivia.compiled.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100" onload="loadGamePage()">
@@ -60,7 +61,7 @@
                         <div class="col d-flex justify-content-center"><img src="assets/img/222-2229682_professor-oak-png-pokemon-professor-oak-png-transparent.png-removebg-preview.png"></div>
                     </div>
                     <div class="row">
-                        <div class="col d-xxl-flex justify-content-xxl-center"><button class="btn btn-primary" id="learn-button" type="button">Learn</button></div>
+                        <div class="col d-xxl-flex justify-content-xxl-center"><button class="btn btn-primary" id="learn-button" type="button" onclick="setupGame(&quot;learn-button&quot;)">Learn</button></div>
                     </div>
                 </div>
             </div>
@@ -69,7 +70,7 @@
     <div id="game-div" style="position: relative;">
         <div id="pokemon-div" style="display: flex;justify-content: center;padding: 43px;">
             <div class="row">
-                <div class="col">
+                <div class="col" style="max-width: 438px;max-height: 438px;" onload="tutorialPhoto()">
                     <div class="container" style="padding-top: 20px;padding-bottom: 20px;">
                         <div class="card-group">
                             <div class="card">
@@ -135,8 +136,9 @@
     <script src="assets/js/pokedex.js"></script>
     <script src="assets/js/pokedexFactory.js"></script>
     <script src="assets/js/pokemonApi.js"></script>
+    <script src="assets/js/trivia-welcome.js"></script>
     <script src="assets/js/trivia/timer.js"></script>
-    <script src="assets/js/trivia/trivia-welcome.js"></script>
+    <script src="assets/js/trivia/trivia-tutorial.js"></script>
     <script src="assets/js/trivia/trivia.js"></script>
 </body>
 
